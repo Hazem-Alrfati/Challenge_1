@@ -25,11 +25,10 @@ html {
   margin-left: auto;
 }
 
-@media (min-width:768px) {
   .arrow {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #009688;
     position: fixed;
@@ -42,11 +41,10 @@ html {
     z-index: 1;
   }
   
-  .arrow a {
-    text-decoration: none;
+  .arrow a i {
+    font-size:20px;
     color: white;
   }
-}
 
 @media (max-width:767px) {
    .arrow a {
