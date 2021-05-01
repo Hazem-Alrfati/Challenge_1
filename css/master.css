@@ -26,7 +26,6 @@ html {
 }
 
   .arrow {
-    display: block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -39,6 +38,9 @@ html {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .arrow a i {
@@ -47,16 +49,11 @@ html {
   }
 
 @media (max-width:767px) {
-   .arrow a {
+   .arrow {
     display: none;
   }
 }
 
-.center-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* Small */
 @media (min-width: 768px) {
@@ -123,7 +120,7 @@ header .container .links li a {
     text-align: center;
   }
 
-  .services .container span {
+  .services .container h1 span {
     color: #2196f3;
   }
 
@@ -169,11 +166,8 @@ header .container .links li a {
 
 @media (max-width: 767px) {
   .content .container {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-
+}
   .content .container .col:not(:last-child) {
     margin-bottom: 25px;
   }
@@ -217,7 +211,6 @@ header .container .links li a {
 
 @media (max-width: 767px) {
   .about .container {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -246,7 +239,6 @@ header .container .links li a {
 }
 
 .rate .container .box {
-  background-color: red;
   flex-basis: 235px;
   padding: 20px;
   text-align: center;
@@ -278,11 +270,6 @@ header .container .links li a {
   background-color: #009688;
 }
 
-@media (max-width: 767px) {
-  .about .container .box {
-    width: calc((100% - 100px) / 3);
-  }
-}
 /* End Rate */
 
 /* Start Our Skills */
@@ -319,15 +306,38 @@ header .container .links li a {
 .skills .container .diagram .col div {
   flex-basis: calc(100% - 80px);
   height: 40px;
-  background-color: white;
   position: relative;
 }
 
-.skills .container .diagram .col div::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  background-color: #2196f3;
+.skills .container .diagram .col .one {
+  background-image: linear-gradient(to right , 
+  #2196f3 60%,
+  white 60%
+  );
+}
+.skills .container .diagram .col .two {
+  background-image: linear-gradient(to right , 
+  #2196f3 70%,
+  white 70%
+  );
+}
+.skills .container .diagram .col .three {
+  background-image: linear-gradient(to right , 
+  #2196f3 80%,
+  white 80%
+  );
+}
+.skills .container .diagram .col .four {
+  background-image: linear-gradient(to right , 
+  #2196f3 65%,
+  white 65%
+  );
+}
+.skills .container .diagram .col .five {
+  background-image: linear-gradient(to right , 
+  #2196f3 90%,
+  white 90%
+  );
 }
 
 .skills .container .diagram .col div::after{
@@ -384,24 +394,6 @@ header .container .links li a {
   }
 }
 
-
-
-.skills .container .diagram .col .one::before{
-  width: 60%;
-}
-
-.skills .container .diagram .col .two::before{
-  width: 70%;
-}
-.skills .container .diagram .col .three::before{
-  width: 80%;
-}
-.skills .container .diagram .col .four::before{
-  width: 65%;
-}
-.skills .container .diagram .col .five::before{
-  width: 90%;
-}
 /* End Our Skills */
 
 /* Start Footer */
